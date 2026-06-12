@@ -143,7 +143,7 @@ header[data-testid="stHeader"] {
 .header-title {
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 32px;
     color: #2F595A;
 }
 .sos-button {
@@ -172,7 +172,7 @@ header[data-testid="stHeader"] {
 
 .hero-card {
     background-color: #FFFFFF;
-    padding: 40px;
+    padding: 40px 40px 40px 50px;
     border-radius: 20px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.015);
     margin-bottom: 40px;
@@ -279,3 +279,322 @@ header[data-testid="stHeader"] {
     color: #708384;
 }
 .card-riwayat .card-subtitle { color: #A4846F; }
+
+/* =========================================
+   4. STYLING HALAMAN RIWAYAT
+   ========================================= */
+
+/* Header Styling */
+.riwayat-header {
+    margin-bottom: 2rem;
+    padding-left: 50px; /* Sejajar dengan padding Home */
+}
+
+.riwayat-title {
+     font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: #2F595A;
+}
+
+.riwayat-subtitle {
+    color: #5A6E6F;
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* History Card Styling */
+.history-card {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 15px;
+    margin-left: 50px; /* Menyelaraskan dengan layout */
+    margin-right: 50px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.history-card:hover {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.history-card-left {
+    flex-shrink: 0;
+}
+
+.history-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #BCE3E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-icon-svg {
+    width: 24px;
+    height: 24px;
+    filter: invert(31%) sepia(14%) saturate(1915%) hue-rotate(134deg) brightness(93%) contrast(87%);
+}
+
+.history-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.history-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 8px;
+}
+
+.history-card-title {
+    color: #2F595A;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.history-card-time {
+    color: #8D9999;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.history-card-description {
+    color: #5A6E6F;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Empty State Styling (MODAL PUTIH) */
+.empty-state-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+    background-color: transparent !important;
+}
+
+.empty-state-card {
+    background-color: #FFFFFF;
+    padding: 70px 50px; 
+    border-radius: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.015);
+    text-align: center;
+    width: 100%; 
+    margin-left: 50px; 
+    margin-right: 50px;
+}
+
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+    filter: invert(31%) sepia(14%) saturate(1915%) hue-rotate(134deg) brightness(93%) contrast(87%);
+}
+
+.empty-state-card h2 {
+    color: #2F595A;
+    font-size: 28px; 
+    font-weight: 600; 
+    margin: 0 0 12px 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.empty-state-card p {
+    color: #708384;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Responsive Design untuk layar kecil/HP */
+@media (max-width: 768px) {
+    .history-card, .empty-state-card {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .riwayat-header {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 35px;
+        padding-right: 20px;
+    }
+    .history-card {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .history-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+   5. STYLING HALAMAN MOOD
+   ========================================= */
+
+.mood-header {
+    margin-bottom: 2rem;
+    padding-left: 50px;
+}
+
+/* Skor Mood Hari Ini */
+.mood-score-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.mood-score-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #DDE5E0;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.02);
+}
+.mood-score-circle img {
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+    filter: invert(31%) sepia(14%) saturate(1915%) hue-rotate(134deg) brightness(93%) contrast(87%);
+}
+.mood-score-value {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #2F595A;
+    margin: 0;
+}
+.mood-score-trend {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #8D9999;
+    margin-top: 5px;
+}
+
+/* Grafik Mood (Empty State) */
+.mood-chart-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 50px 30px 50px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.015);
+}
+.mood-chart-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2F595A;
+    margin-bottom: 5px;
+}
+.mood-chart-subtitle {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #5A6E6F;
+    margin-bottom: 20px;
+}
+.mood-chart-placeholder {
+    height: 200px;
+    width: 100%;
+    border-bottom: 2px solid #EFF2F0;
+    position: relative;
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 39px, #F5F7F6 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mood-chart-placeholder::after {
+    content: 'Belum ada data analisis';
+    font-family: 'Nunito Sans', sans-serif;
+    color: #DDE5E0;
+    font-size: 14px;
+}
+
+/* Grid Statistik */
+.mood-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 50px 40px 50px;
+}
+.mood-stat-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.015);
+}
+.mood-stat-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 15px;
+    filter: invert(31%) sepia(14%) saturate(1915%) hue-rotate(134deg) brightness(93%) contrast(87%);
+}
+.mood-stat-label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #5A6E6F;
+    margin-bottom: 5px;
+}
+.mood-stat-value {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2F595A;
+}
+
+/* Call to Action Card */
+.mood-cta-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 0 50px 60px 50px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.015);
+}
+.mood-cta-card h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #2F595A;
+    margin-bottom: 12px;
+}
+.mood-cta-card p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: #5A6E6F;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+    .mood-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
