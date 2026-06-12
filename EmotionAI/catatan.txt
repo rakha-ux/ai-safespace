@@ -39,3 +39,6 @@ Pilih:
 
 =================================================
 API KEY masih kosong di .env, jadi isi API KEY Google AI sendiri
+=================================================
+Untuk menjalankan uji coba chatbot, buka terminal dan input ini
+python app.py
